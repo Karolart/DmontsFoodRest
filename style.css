@@ -45,23 +45,31 @@ canvas {
 }
 
 .hand-btn {
+  /* ya tenías estas propiedades */
   background: transparent;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
   color: #d3db5f;
-  width: 2rem;
-  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* esto es lo nuevo: */
+  box-shadow: 0 0 4px rgba(211, 219, 95, 0.8), /* color principal */
+              0 0 8px rgba(211, 219, 95, 0.5); /* glow extra */
 }
 
 .hand-btn:hover {
   transform: scale(1.2);
-  color: #ffffff;
+  /* intensificamos un poco el resplandor al hover */
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.9),
+              0 0 12px rgba(255, 255, 255, 0.6);
 }
+
 
 .download-wrapper {
   margin-bottom: 2em;
