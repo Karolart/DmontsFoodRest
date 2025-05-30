@@ -9,6 +9,8 @@ body {
   text-align: center;
   font-size: 28px;
   text-shadow: 0 0 5px #f0f, 0 0 10px #0ff, 0 0 20px #f0f;
+  min-height: 100vh;
+  padding: 1em;
 }
 
 header {
@@ -19,51 +21,79 @@ header {
   color: #0e0d0d;
   font-size: 32px;
   text-shadow: 0 0 6px #ff77ff, 0 0 12px #00ffff;
+  margin-bottom: 1em;
 }
 
 .pdf-viewer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1em;
   gap: 1em;
-  flex-wrap: nowrap; /* flechas y canvas en línea sin saltos */
-}
-
-canvas {
   max-width: 90vw;
-  height: auto;
-  border: 3px solid #3a3a3a;
-  box-shadow: 4px 4px 0 #555;
+  width: 600px;
+  margin: 0 auto;
 }
 
-.nav-btn, .controls button {
+.nav-btn {
   background: #cc8250;
   border: none;
   padding: 0.5em 1em;
-  font-size: 1.8em;
+  font-size: 2em;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 2px 2px 0 #3a3a3a;
-  transition: transform 0.1s ease;
   color: #080808;
   text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
+  transition: transform 0.1s ease;
   user-select: none;
-  min-width: 60px;
-  height: 60px;
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+}
+
+canvas {
+  width: 400px;
+  max-width: 80vw;
+  height: auto;
+  border: 3px solid #3a3a3a;
+  box-shadow: 4px 4px 0 #555;
+  display: block;
+}
+
+.download-wrapper {
+  margin-top: 1em;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.nav-btn:hover, .controls button:hover {
-  transform: scale(1.1);
+.download-btn {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  font-family: 'VT323', monospace;
+  font-size: 1.2em;
+  padding: 0.5em 1.2em;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 #cc8250;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #555;
+  transform: scale(1.05);
 }
 
 footer {
   margin-top: 2em;
   display: flex;
+  justify-content: center;
   gap: 1.5em;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 400px;
 }
 
 footer a {
@@ -74,6 +104,8 @@ footer a {
   font-weight: bold;
   font-size: 22px;
   text-shadow: 0 0 5px #fff;
+  flex: 1 1 140px;
+  text-align: center;
 }
 
 .whatsapp {
@@ -86,43 +118,60 @@ footer a {
   box-shadow: 0 0 10px #fd5949;
 }
 
+/* Responsive */
 @media (max-width: 600px) {
   .pdf-viewer {
-    flex-direction: column;
-    gap: 1.5em;
+    width: 100%;
+    gap: 0.5em;
+  }
+
+  canvas {
+    width: 90vw;
   }
 
   .nav-btn {
-    min-width: 100px;
-    font-size: 2em;
-    height: 50px;
+    font-size: 1.5em;
+    padding: 0.3em 0.8em;
   }
-  
-  .nav-btn {
-    display: block;
-  }
-}
 
-.download-wrapper {
-  width: 100%;
+  footer {
+  margin-top: 2em;
   display: flex;
-  justify-content: center;
-  margin-top: 0.5em;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5em;
 }
 
-.download-btn {
-  background-color: #3a3a3a;
-  color: #ffffff;
-  font-family: 'VT323', monospace;
-  font-size: 1.2em;
-  padding: 0.4em 1em;
+footer .pedido-texto {
+  font-size: 22px;
+  color: white;
+  text-shadow: 0 0 5px #fff;
+  margin-bottom: 0.3em;
+}
+
+footer .social-buttons {
+  display: flex;
+  gap: 1em;
+}
+
+footer a {
   text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 2px 2px 0 #cc8250;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 0 5px #fff;
 }
 
-.download-btn:hover {
-  background-color: #555;
-  transform: scale(1.05);
+.whatsapp {
+  background-color: #25D366;
+  box-shadow: 0 0 6px #25D366;
+}
+
+.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0 0 6px #fd5949;
+}
 }
