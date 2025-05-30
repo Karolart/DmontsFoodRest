@@ -148,3 +148,19 @@ footer {
     font-size: 1em;
   }
 }
+
+.credit-footer {
+  margin-top: 3em;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+
+.credit-footer a {
+  color: #999;
+  text-decoration: none;
+}
+
+.credit-footer a:hover {
+  text-decoration: underline;
+}
