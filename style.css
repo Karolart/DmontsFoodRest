@@ -124,20 +124,59 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .pdf-viewer {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0.5em;
-  }
+ .pdf-viewer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1em;
+  margin: 1em;
+  flex-direction: row;
+  max-width: 100%;
+}
 
-  canvas {
-    max-width: 85vw;
+canvas {
+  max-width: 80vw;
+  height: auto;
+  border: 3px solid #3a3a3a;
+  box-shadow: 4px 4px 0 #555;
+}
+
+/* Flechas: mantén tamaño pequeño, centradas verticalmente */
+.nav-btn {
+  background: #cc8250;
+  border: none;
+  padding: 0.3em 0.5em;
+  font-size: 2.2em;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 #3a3a3a;
+  color: #080808;
+  text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
+  height: fit-content;
+  align-self: center;
+  transition: transform 0.1s ease;
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive: columnas en móviles */
+@media (max-width: 600px) {
+  .pdf-viewer {
+    flex-direction: column;
   }
 
   .nav-btn {
-    font-size: 1.5em;
-    padding: 0.3em 0.6em;
+    font-size: 2em;
+    padding: 0.2em 0.4em;
   }
+
+  canvas {
+    max-width: 95vw;
+  }
+}
 
   .whatsapp, .instagram {
     font-size: 0.9em;
