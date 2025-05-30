@@ -15,10 +15,18 @@ header {
   padding: 1em;
   width: 100%;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  color: #333;
-  font-size: 24px;
+  color: #111111;
+  font-size: 30px;
   font-weight: bold;
+
+  /* contorno usando sombras */
+  text-shadow:
+     2px  2px 0 #fcfafa,
+    -2px  2px 0 #eeeaea,
+     2px -2px 0 #faf7f7,
+    -2px -2px 0 #f1e0e0;
 }
+
 
 main {
   width: 100%;
