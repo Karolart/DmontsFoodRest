@@ -2,10 +2,6 @@ body {
   margin: 0;
   font-family: 'VT323', monospace;
   background-color: #252522;
-  background-image: url('Images/Fondo.png'); /* Aquí pones la ruta o URL de tu imagen */
-  background-size: cover;      /* Para que la imagen cubra todo el fondo */
-  background-position: center; /* Para centrar la imagen */
-  background-repeat: no-repeat; /* Para que no se repita */
   color: #3a3a3a;
   display: flex;
   flex-direction: column;
