@@ -14,72 +14,69 @@ header {
   background-color: #bc703b;
   padding: 1em;
   width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   color: #333;
   font-size: 24px;
   font-weight: bold;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
+  max-width: 800px;
 }
 
 .pdf-viewer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1em;
   margin: 2em 1em;
 }
 
 canvas {
   max-width: 90vw;
-  max-height: 80vh;
-  height: auto;
   border: 3px solid #3a3a3a;
   box-shadow: 4px 4px 0 #555;
 }
 
+.nav-buttons {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
 .hand-btn {
-  background: transparent;         /* Sin fondo ruidoso */
-  border: none;                    /* Sin borde */
-  font-size: 1.5rem;               /* Tamaño reducido de la mano */
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
   cursor: pointer;
-  color: #d3db5f;                  /* Color amarillo suave como tu texto */
+  color: #d3db5f;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;                   /* Tamaño compacto */
-  height: 2.5rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s;
 }
 
 .hand-btn:hover {
   transform: scale(1.2);
-  color: #ffffff;                  /* Cambio sutil al pasar el mouse */
+  color: #ffffff;
 }
 
 .download-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
   margin-bottom: 2em;
 }
 
 .download-btn {
   background-color: #3a3a3a;
-  color: #ffffff;
+  color: #fff;
   font-family: 'VT323', monospace;
   font-size: 1.2em;
   padding: 0.4em 1em;
   text-decoration: none;
   border-radius: 8px;
   box-shadow: 2px 2px 0 #cc8250;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 .download-btn:hover {
@@ -88,20 +85,19 @@ canvas {
 }
 
 footer {
-  text-align: center;
   padding: 1em 0;
 }
 
 .pedido-texto {
-  color: white;
+  color: #fff;
   font-size: 1.2em;
   margin-bottom: 0.5em;
 }
 
 .social-buttons {
   display: flex;
-  justify-content: center;
   gap: 1em;
+  justify-content: center;
 }
 
 .whatsapp,
@@ -110,24 +106,20 @@ footer {
   padding: 0.5em 1em;
   border-radius: 25px;
   text-decoration: none;
-  color: rgb(14, 0, 0);
+  color: #0e0000;
   font-weight: bold;
-  text-shadow: 0 0 5px #fff;
 }
 
 .whatsapp {
   background-color: #25D366;
-  box-shadow: 0 0 10px #25D366;
 }
 
 .instagram {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  box-shadow: 0 0 10px #fd5949;
 }
 
 .credit-footer {
   margin-top: 3em;
-  text-align: center;
   font-size: 16px;
   color: #999;
 }
@@ -143,24 +135,13 @@ footer {
 
 /* Responsive */
 @media (max-width: 600px) {
-  .pdf-viewer {
-    flex-direction: column;
-    gap: 1em;
-  }
-
   .hand-btn {
-    font-size: 1.8em;
-    width: 3.5em;
-    height: 3.5em;
+    font-size: 1.2rem;
+    width: 1.8rem;
+    height: 1.8rem;
   }
 
-  .download-btn {
-    font-size: 1em;
-  }
-
-  .whatsapp,
-  .instagram {
-    font-size: 0.9em;
-    padding: 0.4em 0.8em;
+  canvas {
+    max-width: 95vw;
   }
 }

@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menú Retro</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú Retro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
 </head>
-
 <body>
-    <header>
-        Bienvenidos a DMONTS FOOD, explora nuestro menú
-    </header>
+  <header>
+    Bienvenidos a DMONTS FOOD, explora nuestro menú
+  </header>
 
+  <main>
+    <div class="pdf-viewer">
+      <canvas id="pdfCanvas"></canvas>
+      <div class="nav-buttons">
+        <button class="hand-btn" id="prev-page">👈</button>
+        <button class="hand-btn" id="next-page">👉</button>
+      </div>
+    </div>
 
-    <main>
-        <div class="pdf-viewer">
-            <div class="hand-btn" id="prev-page">👈</div>
-            <canvas id="pdfCanvas"></canvas>
-            <div class="hand-btn" id="next-page">👉</div>
-        </div>
+    <div class="download-wrapper">
+      <a href="menu.pdf" download class="download-btn">📄 Descargar Menú PDF</a>
+    </div>
 
+    <footer>
+      <div class="pedido-texto">Haz tu pedido:</div>
+      <div class="social-buttons">
+        <a class="whatsapp" href="https://wa.me/573218936622" target="_blank">WhatsApp</a>
+        <a class="instagram" href="https://www.instagram.com/dmontsfood/" target="_blank">Instagram</a>
+      </div>
+    </footer>
 
+    <footer class="credit-footer">
+      <p>
+        Creado por <strong>Karol Díaz</strong> <a href="https://www.linkedin.com/in/karolart/" target="_blank">@karolart</a> 
+        para <strong>DMONTSFOOD</strong> <br>
+        © Todos los derechos reservados
+      </p>
+    </footer>
+  </main>
 
-        <div class="download-wrapper">
-            <a href="menu.pdf" download class="download-btn">📄 Descargar Menú PDF</a>
-        </div>
-
-        <footer>
-            <div class="pedido-texto">Haz tu pedido:</div>
-            <div class="social-buttons">
-                <a class="whatsapp" href="https://wa.me/573218936622" target="_blank">WhatsApp</a>
-                <a class="instagram" href="https://www.instagram.com/dmontsfood/" target="_blank">Instagram</a>
-            </div>
-        </footer>
-
-        <footer class="credit-footer">
-            <p>
-                Creado por <strong>Karol Díaz</strong> <a href="https://www.linkedin.com/in/karolart/"
-                    target="_blank">@karolart</a> para <strong>DMONTSFOOD</strong> <br>
-                © Todos los derechos reservados
-                  Bello, Antioquía, Colombia
-                            2025
-            </p>
-        </footer>
-
-    </main>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
