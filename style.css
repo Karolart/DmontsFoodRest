@@ -165,16 +165,52 @@ canvas {
 /* Responsive: columnas en móviles */
 @media (max-width: 600px) {
   .pdf-viewer {
-    flex-direction: column;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  gap: 1em;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.nav-btn, .controls button {
+  background: #cc8250;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 #3a3a3a;
+  transition: transform 0.1s ease;
+  color: #fff;
+  text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
   .nav-btn {
-    font-size: 2em;
-    padding: 0.2em 0.4em;
+    font-size: 1.6em;
+    padding: 0.4em 0.8em;
   }
 
   canvas {
     max-width: 95vw;
+  }
+
+  .controls {
+    flex-direction: row;
+    margin-top: 1em;
   }
 }
 
