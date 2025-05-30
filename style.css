@@ -91,3 +91,22 @@ footer a {
     margin-top: 1em;
   }
 }
+
+.download-btn {
+  margin-top: 1em;
+  background-color: #7fffd4;
+  color: #000;
+  font-family: 'VT323', monospace;
+  font-size: 1.6em;
+  padding: 0.6em 1.4em;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 #3a3a3a;
+  transition: transform 0.1s ease;
+}
+
+.download-btn:hover {
+  transform: scale(1.1);
+  background-color: #76eec6;
+}
+
