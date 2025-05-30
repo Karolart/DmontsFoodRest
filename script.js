@@ -33,15 +33,16 @@ function queueRenderPage(num) {
 }
 
 // Botones de navegación por flechas
-document.getElementById('prevBtn').addEventListener('click', () => {
+document.getElementById('prevPage').addEventListener('click', () => {
   if (pageNum <= 1) return;
   queueRenderPage(pageNum - 1);
 });
 
-document.getElementById('nextBtn').addEventListener('click', () => {
+document.getElementById('nextPage').addEventListener('click', () => {
   if (pageNum >= pdfDoc.numPages) return;
   queueRenderPage(pageNum + 1);
 });
+
 
 // Carga el PDF
 pdfjsLib.getDocument(url).promise.then(pdf => {
