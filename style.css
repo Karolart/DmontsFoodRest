@@ -45,25 +45,22 @@ canvas {
 }
 
 .hand-btn {
-  background: #cc8250;
-  border: none;
-  font-size: 1em;
+  background: transparent;         /* Sin fondo ruidoso */
+  border: none;                    /* Sin borde */
+  font-size: 1.5rem;               /* Tamaño reducido de la mano */
   cursor: pointer;
-  border-radius: 2px;
-  box-shadow: 2px 2px 0 #3a3a3a;
-  color: #080808;
-  text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
+  color: #d3db5f;                  /* Color amarillo suave como tu texto */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3em;
-  height: 3em;
-  transition: transform 0.1s ease;
+  width: 2.5rem;                   /* Tamaño compacto */
+  height: 2.5rem;
+  transition: transform 0.2s ease;
 }
 
 .hand-btn:hover {
-  transform: scale(1.1);
-  background-color: #b36c45;
+  transform: scale(1.2);
+  color: #ffffff;                  /* Cambio sutil al pasar el mouse */
 }
 
 .download-wrapper {
