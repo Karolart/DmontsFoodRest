@@ -143,11 +143,12 @@ footer {
     box-shadow: 4px 4px 0 #555;
   }
 
+  @media (max-width: 600px) {
   .nav-btn {
+    font-size: 1.6em !important;
+    padding: 0.4em 0.8em !important;
     background: #cc8250;
     border: none;
-    padding: 0.4em 0.8em;
-    font-size: 1.6em;
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 2px 2px 0 #3a3a3a;
@@ -161,6 +162,8 @@ footer {
   .nav-btn:hover {
     transform: scale(1.1);
   }
+}
+
 
   .controls {
     display: flex;
