@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'VT323', monospace;
   background-color: #252522;
-  color: #3a3a3a;
+  color: #d3db5f;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,14 +11,16 @@ body {
 }
 
 header {
-  background-color: #cc8250;
+  background-color: #bc703b; /* color neutro claro */
   padding: 1em;
   width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: #0e0d0d;
-  font-size: 32px;
-  text-shadow: 0 0 6px #ff77ff, 0 0 12px #00ffff;
+  color: #333; /* texto más suave */
+  font-size: 24px; /* más pequeño que antes */
+  text-shadow: none; /* sin brillo */
+  font-weight: bold;
 }
+
 
 main {
   display: flex;
@@ -29,6 +31,7 @@ main {
 
 .pdf-viewer {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
@@ -48,16 +51,19 @@ canvas {
   background: #cc8250;
   border: none;
   padding: 0.5em 1em;
-  font-size: 1.8em;
+  font-size: 2em;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 2px 2px 0 #3a3a3a;
-  transition: transform 0.1s ease;
   color: #080808;
   text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 3em;
+  flex-shrink: 0;
+  transition: transform 0.1s ease;
 }
 
 .nav-btn:hover {
@@ -111,7 +117,7 @@ footer {
   padding: 0.5em 1em;
   border-radius: 25px;
   text-decoration: none;
-  color: white;
+  color: rgb(14, 0, 0);
   font-weight: bold;
   text-shadow: 0 0 5px #fff;
 }
@@ -126,78 +132,12 @@ footer {
   box-shadow: 0 0 10px #fd5949;
 }
 
-/* Responsive styles */
-.pdf-viewer {
+.controls {
   display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 1em;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-  margin: 2em 1em;
-  flex-wrap: nowrap; /* <- muy importante */
-}
-
-canvas {
-  max-width: 90vw;
-  max-height: 80vh;
-  height: auto;
-  border: 3px solid #3a3a3a;
-  box-shadow: 4px 4px 0 #555;
-}
-
-.nav-btn {
-  background: #cc8250;
-  border: none;
-  padding: 0.5em 1em;
-  font-size: 2em;
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 2px 2px 0 #3a3a3a;
-  color: #080808;
-  text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3em;
-  height: 3em;
-  flex-shrink: 0; /* evita que las flechas se achiquen */
-}
-
-.nav-btn:hover {
-  transform: scale(1.1);
-}
-
-@media (max-width: 600px) {
-  .pdf-viewer {
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .nav-btn {
-    font-size: 1.8em;
-    width: 3.5em;
-    height: 3.5em;
-  }
-}
-
-
-  .controls {
-    display: flex;
-    justify-content: center;
-    gap: 1.5em;
-    margin-top: 1em;
-    flex-direction: row;
-  }
-
-  .download-btn {
-    font-size: 1em;
-  }
-
-  .whatsapp,
-  .instagram {
-    font-size: 0.9em;
-    padding: 0.4em 0.8em;
-  }
 }
 
 .credit-footer {
@@ -214,4 +154,28 @@ canvas {
 
 .credit-footer a:hover {
   text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .pdf-viewer {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .nav-btn {
+    font-size: 1.8em;
+    width: 3.5em;
+    height: 3.5em;
+  }
+
+  .download-btn {
+    font-size: 1em;
+  }
+
+  .whatsapp,
+  .instagram {
+    font-size: 0.9em;
+    padding: 0.4em 0.8em;
+  }
 }
