@@ -55,6 +55,9 @@ canvas {
   transition: transform 0.1s ease;
   color: #080808;
   text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-btn:hover {
@@ -124,43 +127,56 @@ footer {
 }
 
 /* Responsive styles */
+.pdf-viewer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 2em 1em;
+  flex-wrap: nowrap; /* <- muy importante */
+}
+
+canvas {
+  max-width: 90vw;
+  max-height: 80vh;
+  height: auto;
+  border: 3px solid #3a3a3a;
+  box-shadow: 4px 4px 0 #555;
+}
+
+.nav-btn {
+  background: #cc8250;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 #3a3a3a;
+  color: #080808;
+  text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 3em;
+  flex-shrink: 0; /* evita que las flechas se achiquen */
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 600px) {
   .pdf-viewer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1em;
-    margin: 1em;
     flex-direction: column;
-    max-width: 100%;
+    gap: 1em;
   }
 
-  canvas {
-    max-width: 95vw;
-    height: auto;
-    border: 3px solid #3a3a3a;
-    box-shadow: 4px 4px 0 #555;
-  }
-
-  @media (max-width: 600px) {
   .nav-btn {
-    font-size: 1.6em !important;
-    padding: 0.4em 0.8em !important;
-    background: #cc8250;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 2px 2px 0 #3a3a3a;
-    color: #fff;
-    text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
-    height: fit-content;
-    align-self: center;
-    transition: transform 0.1s ease;
-  }
-
-  .nav-btn:hover {
-    transform: scale(1.1);
+    font-size: 1.8em;
+    width: 3.5em;
+    height: 3.5em;
   }
 }
 
