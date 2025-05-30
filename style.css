@@ -2,6 +2,10 @@ body {
   margin: 0;
   font-family: 'VT323', monospace;
   background-color: #252522;
+  background-image: url('Images/Fondo.png'); /* Aquí pones la ruta o URL de tu imagen */
+  background-size: cover;      /* Para que la imagen cubra todo el fondo */
+  background-position: center; /* Para centrar la imagen */
+  background-repeat: no-repeat; /* Para que no se repita */
   color: #3a3a3a;
   display: flex;
   flex-direction: column;
@@ -27,7 +31,7 @@ header {
   justify-content: center;
   margin: 1em;
   gap: 1em;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* flechas y canvas en línea sin saltos */
 }
 
 canvas {
@@ -48,6 +52,12 @@ canvas {
   transition: transform 0.1s ease;
   color: #080808;
   text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
+  user-select: none;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-btn:hover, .controls button:hover {
@@ -81,14 +91,19 @@ footer a {
 }
 
 @media (max-width: 600px) {
-  .nav-btn {
-    display: none;
+  .pdf-viewer {
+    flex-direction: column;
+    gap: 1.5em;
   }
 
-  .controls {
-    display: flex;
-    gap: 1em;
-    margin-top: 1em;
+  .nav-btn {
+    min-width: 100px;
+    font-size: 2em;
+    height: 50px;
+  }
+  
+  .nav-btn {
+    display: block;
   }
 }
 
@@ -115,4 +130,3 @@ footer a {
   background-color: #555;
   transform: scale(1.05);
 }
-
