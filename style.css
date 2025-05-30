@@ -11,16 +11,14 @@ body {
 }
 
 header {
-  background-color: #bc703b; /* color neutro claro */
+  background-color: #bc703b;
   padding: 1em;
   width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: #333; /* texto más suave */
-  font-size: 24px; /* más pequeño que antes */
-  text-shadow: none; /* sin brillo */
+  color: #333;
+  font-size: 24px;
   font-weight: bold;
 }
-
 
 main {
   display: flex;
@@ -34,7 +32,6 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
   gap: 1em;
   margin: 2em 1em;
 }
@@ -47,13 +44,12 @@ canvas {
   box-shadow: 4px 4px 0 #555;
 }
 
-.nav-btn {
+.hand-btn {
   background: #cc8250;
   border: none;
-  padding: 0.5em 1em;
-  font-size: 2em;
+  font-size: 1em;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 2px;
   box-shadow: 2px 2px 0 #3a3a3a;
   color: #080808;
   text-shadow: 0 0 4px #ff77ff, 0 0 8px #00ffff;
@@ -62,12 +58,12 @@ canvas {
   justify-content: center;
   width: 3em;
   height: 3em;
-  flex-shrink: 0;
   transition: transform 0.1s ease;
 }
 
-.nav-btn:hover {
+.hand-btn:hover {
   transform: scale(1.1);
+  background-color: #b36c45;
 }
 
 .download-wrapper {
@@ -132,14 +128,6 @@ footer {
   box-shadow: 0 0 10px #fd5949;
 }
 
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 1.5em;
-  margin-top: 1em;
-  flex-direction: row;
-}
-
 .credit-footer {
   margin-top: 3em;
   text-align: center;
@@ -156,14 +144,14 @@ footer {
   text-decoration: underline;
 }
 
-/* Responsive styles */
+/* Responsive */
 @media (max-width: 600px) {
   .pdf-viewer {
     flex-direction: column;
     gap: 1em;
   }
 
-  .nav-btn {
+  .hand-btn {
     font-size: 1.8em;
     width: 3.5em;
     height: 3.5em;
