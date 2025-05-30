@@ -2,41 +2,41 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menú Retro</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú Retro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>¡Bienvenido!</h1>
-        <p>Explora nuestro menú</p>
-    </header>
+  <header>
+    <h1>¡Bienvenido!</h1>
+    <p>Explora nuestro menú</p>
+  </header>
 
+  <main>
     <div class="pdf-viewer">
-        <canvas id="pdfCanvas"></canvas>
+      <button id="prevBtn" class="nav-btn">⬅</button>
+      <canvas id="pdfCanvas"></canvas>
+      <button id="nextBtn" class="nav-btn">➡</button>
+    </div>
 
-        <div class="controls">
-            <button id="prevBtn" class="nav-btn">⬅</button>
-            <button id="nextBtn" class="nav-btn">➡</button>
-        </div>
-
-        <a href="menu.pdf" download class="download-btn">📄 Descargar Menú PDF</a>
+    <div class="download-wrapper">
+      <a href="menu.pdf" download class="download-btn">📄 Descargar Menú PDF</a>
     </div>
 
     <footer>
-        <div class="pedido-texto">Haz tu pedido:</div>
-        <div class="social-buttons">
-            <a class="whatsapp" href="https://wa.me/xxxxxxxxxx" target="_blank">WhatsApp</a>
-            <a class="instagram" href="https://instagram.com/xxxxxxxx" target="_blank">Instagram</a>
-        </div>
+      <div class="pedido-texto">Haz tu pedido:</div>
+      <div class="social-buttons">
+        <a class="whatsapp" href="https://wa.me/xxxxxxxxxx" target="_blank">WhatsApp</a>
+        <a class="instagram" href="https://instagram.com/xxxxxxxx" target="_blank">Instagram</a>
+      </div>
     </footer>
+  </main>
 
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
