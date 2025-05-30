@@ -92,21 +92,27 @@ footer a {
   }
 }
 
+.download-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
 .download-btn {
-  margin-top: 1em;
-  background-color: #7fffd4;
-  color: #000;
+  background-color: #3a3a3a;
+  color: #ffffff;
   font-family: 'VT323', monospace;
-  font-size: 1.6em;
-  padding: 0.6em 1.4em;
+  font-size: 1.2em;
+  padding: 0.4em 1em;
   text-decoration: none;
-  border-radius: 10px;
-  box-shadow: 2px 2px 0 #3a3a3a;
-  transition: transform 0.1s ease;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 #cc8250;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .download-btn:hover {
-  transform: scale(1.1);
-  background-color: #76eec6;
+  background-color: #555;
+  transform: scale(1.05);
 }
 

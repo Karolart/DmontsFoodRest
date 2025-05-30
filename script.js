@@ -43,17 +43,6 @@ document.getElementById('nextBtn').addEventListener('click', () => {
   queueRenderPage(pageNum + 1);
 });
 
-// Botones táctiles (opcional)
-document.getElementById('touchPrev').addEventListener('click', () => {
-  if (pageNum <= 1) return;
-  queueRenderPage(pageNum - 1);
-});
-
-document.getElementById('touchNext').addEventListener('click', () => {
-  if (pageNum >= pdfDoc.numPages) return;
-  queueRenderPage(pageNum + 1);
-});
-
 // Carga el PDF
 pdfjsLib.getDocument(url).promise.then(pdf => {
   pdfDoc = pdf;
@@ -61,4 +50,26 @@ pdfjsLib.getDocument(url).promise.then(pdf => {
 }).catch(err => {
   console.error(err);
   alert('Error cargando el PDF');
+});
+
+// Soporte para swipe en pantallas táctiles
+let startX = 0;
+
+canvas.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+canvas.addEventListener('touchend', (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diffX = endX - startX;
+
+  if (Math.abs(diffX) > 50) {
+    if (diffX > 0) {
+      // Swipe derecha
+      if (pageNum > 1) queueRenderPage(pageNum - 1);
+    } else {
+      // Swipe izquierda
+      if (pageNum < pdfDoc.numPages) queueRenderPage(pageNum + 1);
+    }
+  }
 });
